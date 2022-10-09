@@ -3,6 +3,48 @@
   font-family: 'Lato', sans-serif;
 }
 
+html {
+  --spacing-1x: 8px;
+  --spacing-2x: 16px;
+  --spacing-3x: 24px;
+  --spacing-4x: 32px;
+  --spacing-5x: 48px;
+  --spacing-6x: 64px;
+  --spacing-7x: 96px;
+  --spacing-8x: 128px;
+
+  --negative-spacing-1x: -8px;
+  --negative-spacing-2x: -16px;
+  --negative-spacing-3x: -24px;
+  --negative-spacing-4x: -32px;
+  --negative-spacing-5x: -48px;
+  --negative-spacing-6x: -64px;
+  --negative-spacing-7x: -96px;
+  --negative-spacing-8x: -128px;
+
+  --font-size-1: 1rem;
+  --font-size-1-25: 1.25rem;
+  --font-size-1-5: 1.5rem;
+  --font-size-2: 2rem;
+
+  --green: hsl(160deg, 100%, 30%);
+  --gold-lighter:hsl(45deg, 100%, 50%);
+  --gold-darker:hsl(45deg, 100%, 40%);
+
+  --grey-black: hsl(0deg, 0%, 0%);
+  --grey-very-dark: hsl(0deg, 0%, 10%);
+  --grey-dark: hsl(0deg, 0%, 30%);
+  --grey-medium: hsl(0deg, 0%, 40%);
+  --grey-light: hsl(0deg, 0%, 60%);
+  --grey-white: hsl(0deg, 0%, 100%);
+
+  --color-primary: var(--green);
+  --color-secondary-lighter: var(--gold-lighter);
+  --color-secondary-darker: var(--gold-darker);
+
+  --main-box-border: 5px solid var(--grey-medium);
+}
+
 html,
 body {
   margin: 0;
@@ -10,3 +52,62 @@ body {
 }
 
 /* Add styles here! */
+
+h1 {
+  font-size: var(--font-size-2);
+}
+
+h2 {
+  font-size: var(--font-size-1-25);
+}
+
+p {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+strong {
+  color: var(--color-primary);
+}
+
+main {
+  border-top: var(--main-box-border);
+  background-color: var(--grey-light);
+  margin-top: var(--spacing-5x);
+  padding-top: var(--spacing-5x);
+  padding-bottom: var(--spacing-5x);
+}
+
+.max-width-wrapper {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 var(--spacing-1x)
+}
+
+.intro-chunk {
+  max-width: 330px;
+}
+
+.title {
+  margin-top: var(--spacing-7x);
+  margin-bottom: var(--spacing-5x);
+}
+
+.card {
+  background-color: var(--grey-white);
+  margin-left: var(--negative-spacing-2x);
+  margin-right: var(--negative-spacing-2x);
+  padding: var(--spacing-1x) var(--spacing-2x);
+  border-bottom: var(--main-box-border);
+}
+
+.indented-heading {
+  display: inline-block;
+  margin: 0;
+  margin-left: var(--negative-spacing-3x);
+  padding: 1rem var(--spacing-3x);
+  color: var(--grey-very-dark); 
+  background-color: var(--color-secondary-lighter);
+  border-bottom: 5px solid var(--color-secondary-darker);
+}
